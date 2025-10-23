@@ -17,6 +17,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm run test
+    
 
-      - name: Check Node version
-        run: node --version
